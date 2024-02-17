@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-GPE230_Verschueren.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\Chain\Documents\GitHub\GPE230\GPE230_Verschueren\Intermediate\Build\Win64\x64\GPE230_VerschuerenEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
+"C:\Users\Chain\Documents\GitHub\GPE230\GPE230_Verschueren\Intermediate\Build\Win64\x64\UnrealEditor\Development\GPE230_Verschueren\GPE230_Verschueren.cpp.obj"
+"C:\Users\Chain\Documents\GitHub\GPE230\GPE230_Verschueren\Intermediate\Build\Win64\x64\UnrealEditor\Development\GPE230_Verschueren\Default.rc2.res"
+/OUT:"C:\Users\Chain\Documents\GitHub\GPE230\GPE230_Verschueren\Intermediate\Build\Win64\x64\UnrealEditor\Development\GPE230_Verschueren\UnrealEditor-GPE230_Verschueren.lib"
