@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\chain\\documents\\github\\gpe230\\gpe230_verschueren\\source\\gpe230_verschueren\\private\\mazegamemode.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\chain\\documents\\github\\gpe230\\gpe230_verschueren\\intermediate\\build\\win64\\x64\\gpe230_verschuereneditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\chain\\documents\\github\\gpe230\\gpe230_verschueren\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\gpe230_verschueren\\definitions.gpe230_verschueren.h",
+            "c:\\users\\chain\\documents\\github\\gpe230\\gpe230_verschueren\\source\\gpe230_verschueren\\public\\mazegamemode.h",
+            "a:\\epic v2\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "a:\\epic v2\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "a:\\epic v2\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "a:\\epic v2\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "c:\\users\\chain\\documents\\github\\gpe230\\gpe230_verschueren\\intermediate\\build\\win64\\unrealeditor\\inc\\gpe230_verschueren\\uht\\mazegamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

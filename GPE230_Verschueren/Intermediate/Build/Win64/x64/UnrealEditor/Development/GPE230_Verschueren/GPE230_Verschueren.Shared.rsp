@@ -1,4 +1,5 @@
 /I "."
+/I "C:\Users\Chain\Documents\GitHub\GPE230\GPE230_Verschueren\Source\GPE230_Verschueren\Private"
 /I "..\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\UHT"
 /I "..\Shaders\Shared"
 /I "Runtime\Engine\Classes"
@@ -258,6 +259,7 @@
 /I "Developer\WidgetRegistration\Public"
 /I "C:\Users\Chain\Documents\GitHub\GPE230\GPE230_Verschueren\Intermediate\Build\Win64\UnrealEditor\Inc\GPE230_Verschueren\UHT"
 /I "C:\Users\Chain\Documents\GitHub\GPE230\GPE230_Verschueren\Source"
+/I "C:\Users\Chain\Documents\GitHub\GPE230\GPE230_Verschueren\Source\GPE230_Verschueren\Public"
 /I "..\Plugins\EnhancedInput\Intermediate\Build\Win64\UnrealEditor\Inc\EnhancedInput\UHT"
 /I "..\Plugins\EnhancedInput\Source\EnhancedInput\Public"
 /external:W0
