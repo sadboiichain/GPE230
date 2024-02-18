@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class GPE230_VerschuerenEditorTarget : TargetRules
 {
-	public GPE230_VerschuerenEditorTarget( TargetInfo Target) : base(Target)
+	public GPE230_VerschuerenEditorTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V4;

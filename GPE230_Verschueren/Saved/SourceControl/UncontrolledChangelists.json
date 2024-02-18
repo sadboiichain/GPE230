@@ -5,7 +5,8 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"C:/Users/Chain/Documents/GitHub/GPE230/GPE230_Verschueren/Content/StarterContent/Architecture/Floor_400x400.uasset"
+				"C:/Users/Chain/Documents/GitHub/GPE230/GPE230_Verschueren/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset",
+				"C:/Users/Chain/Documents/GitHub/GPE230/GPE230_Verschueren/Content/Levels/Main.umap"
 			]
 		}
 	]

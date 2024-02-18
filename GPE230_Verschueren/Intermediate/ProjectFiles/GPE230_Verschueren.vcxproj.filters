@@ -11,10 +11,14 @@
     <None Include="..\..\Source\GPE230_VerschuerenEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
       <Filter>Config</Filter>
     </None>
     <None Include="..\..\Config\DefaultEngine.ini">
@@ -36,6 +40,24 @@
       <Filter>Source\GPE230_Verschueren</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\GPE230_Verschueren\GPE230_Verschueren.h">
+      <Filter>Source\GPE230_Verschueren</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GPE230_Verschueren\GPE230_VerschuerenCharacter.cpp">
+      <Filter>Source\GPE230_Verschueren</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GPE230_Verschueren\GPE230_VerschuerenCharacter.h">
+      <Filter>Source\GPE230_Verschueren</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GPE230_Verschueren\GPE230_VerschuerenGameMode.cpp">
+      <Filter>Source\GPE230_Verschueren</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GPE230_Verschueren\GPE230_VerschuerenGameMode.h">
+      <Filter>Source\GPE230_Verschueren</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GPE230_Verschueren\mazePlayerCharacter.cpp">
+      <Filter>Source\GPE230_Verschueren</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GPE230_Verschueren\mazePlayerCharacter.h">
       <Filter>Source\GPE230_Verschueren</Filter>
     </ClInclude>
   </ItemGroup>
