@@ -6,7 +6,11 @@
 			"description": "Default Uncontrolled Changelist",
 			"files": [
 				"C:/Users/Chain/Documents/GitHub/GPE230/GPE230_Verschueren/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset",
-				"C:/Users/Chain/Documents/GitHub/GPE230/GPE230_Verschueren/Content/Levels/Main.umap"
+				"C:/Users/Chain/Documents/GitHub/GPE230/GPE230_Verschueren/Content/Levels/Main.umap",
+				"C:/Users/Chain/Documents/GitHub/GPE230/GPE230_Verschueren/Content/Levels/TestLevels/MovementTest.umap",
+				"C:/Users/Chain/Documents/GitHub/GPE230/GPE230_Verschueren/Content/MazeCharacterBP.uasset",
+				"C:/Users/Chain/Documents/GitHub/GPE230/GPE230_Verschueren/Content/mazeGameModeBP.uasset",
+				"C:/Users/Chain/Documents/GitHub/GPE230/GPE230_Verschueren/Content/mazeGameModeBP.uasset"
 			]
 		}
 	]

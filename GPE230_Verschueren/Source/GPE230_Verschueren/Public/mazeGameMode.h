@@ -2,9 +2,12 @@
 
 #pragma once
 
+#include "GameFramework/DefaultPawn.h"
+#include "MazeCharacter.h"
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
 #include "mazeGameMode.generated.h"
+
 
 /**
  * 
@@ -13,5 +16,14 @@ UCLASS()
 class GPE230_VERSCHUEREN_API AmazeGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
+
+public:
+	void InitGameState() override;
+
+private:
+	UPROPERTY(EditAnywhere, NoClear)
+	TSubclassOf<AMazeCharacter> DefaultPlayerCharacter = AMazeCharacter::StaticClass();
 	
+
 };
+

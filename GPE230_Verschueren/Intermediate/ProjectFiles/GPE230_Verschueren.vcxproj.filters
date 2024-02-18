@@ -45,6 +45,9 @@
     <Filter Include="Source\GPE230_Verschueren\Private">
       <UniqueIdentifier>{CD009794-CFBA-379A-8CD0-6DBECF0ADD86}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\GPE230_Verschueren\Private\MazeCharacter.cpp">
+      <Filter>Source\GPE230_Verschueren\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\GPE230_Verschueren\Private\mazeGameMode.cpp">
       <Filter>Source\GPE230_Verschueren\Private</Filter>
     </ClCompile>
@@ -57,6 +60,9 @@
     <Filter Include="Source\GPE230_Verschueren\Public">
       <UniqueIdentifier>{1C27A9EB-18BC-3B44-B267-A14B51506E0F}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\GPE230_Verschueren\Public\MazeCharacter.h">
+      <Filter>Source\GPE230_Verschueren\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\GPE230_Verschueren\Public\mazeGameMode.h">
       <Filter>Source\GPE230_Verschueren\Public</Filter>
     </ClInclude>
