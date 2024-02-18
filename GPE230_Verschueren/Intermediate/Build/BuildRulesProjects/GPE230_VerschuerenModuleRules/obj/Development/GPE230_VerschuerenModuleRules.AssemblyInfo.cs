@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GPE230_VerschuerenModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+529a582d30efa1efc14e25b7d0c4d0a2a78c0d2a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+221f83d39c50454c5035f0dc7ab7bc2c7f483e90")]
 [assembly: System.Reflection.AssemblyProductAttribute("GPE230_VerschuerenModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GPE230_VerschuerenModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

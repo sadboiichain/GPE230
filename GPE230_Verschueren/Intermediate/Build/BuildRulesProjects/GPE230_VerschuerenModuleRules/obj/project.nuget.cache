@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XNriGeq//2bO5Hejw+HE3AMgG/jdru4DxerNigO+OUtYzv6h/c/S3JnMQn5xkMO3omhPf2VJEd4DkmUYSihEMw==",
+  "dgSpecHash": "8nNFhmjDwuLiBEBh6vG7To9wfyfmMcapFgRPSWVtBgPyzWwiMtHQ57LF4I+1a85vQTp83D0JKXLcgiZO9FLOAQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Chain\\Documents\\GitHub\\GPE230\\GPE230_Verschueren\\Intermediate\\Build\\BuildRulesProjects\\GPE230_VerschuerenModuleRules\\GPE230_VerschuerenModuleRules.csproj",
   "expectedPackageFiles": [
@@ -139,10 +139,7 @@
     "C:\\Users\\Chain\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\Chain\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
     "C:\\Users\\Chain\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\Chain\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Chain\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\Chain\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\Chain\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512"
+    "C:\\Users\\Chain\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
