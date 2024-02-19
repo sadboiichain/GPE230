@@ -21,6 +21,8 @@ public:
 	void InitGameState() override;
 
 private:
+
+	//set up the default pawn to the a maze character
 	UPROPERTY(EditAnywhere, NoClear)
 	TSubclassOf<AMazeCharacter> DefaultPlayerCharacter = AMazeCharacter::StaticClass();
 	

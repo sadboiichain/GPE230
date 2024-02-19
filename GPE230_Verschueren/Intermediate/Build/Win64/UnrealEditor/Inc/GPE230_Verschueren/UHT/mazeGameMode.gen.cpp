@@ -57,7 +57,13 @@ void EmptyLinkFunctionForGeneratedCodemazeGameMode() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AmazeGameMode_Statics::NewProp_DefaultPlayerCharacter_MetaData[] = {
 		{ "Category", "mazeGameMode" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//set up the default pawn to the a maze character\n" },
+#endif
 		{ "ModuleRelativePath", "Public/mazeGameMode.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "set up the default pawn to the a maze character" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AmazeGameMode_Statics::NewProp_DefaultPlayerCharacter = { "DefaultPlayerCharacter", nullptr, (EPropertyFlags)0x0044000002000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AmazeGameMode, DefaultPlayerCharacter), Z_Construct_UClass_UClass, Z_Construct_UClass_AMazeCharacter_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AmazeGameMode_Statics::NewProp_DefaultPlayerCharacter_MetaData), Z_Construct_UClass_AmazeGameMode_Statics::NewProp_DefaultPlayerCharacter_MetaData) };
@@ -103,9 +109,9 @@ void EmptyLinkFunctionForGeneratedCodemazeGameMode() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GPE230_Verschueren_Source_GPE230_Verschueren_Public_mazeGameMode_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AmazeGameMode, AmazeGameMode::StaticClass, TEXT("AmazeGameMode"), &Z_Registration_Info_UClass_AmazeGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AmazeGameMode), 3567476638U) },
+		{ Z_Construct_UClass_AmazeGameMode, AmazeGameMode::StaticClass, TEXT("AmazeGameMode"), &Z_Registration_Info_UClass_AmazeGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AmazeGameMode), 2997738063U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GPE230_Verschueren_Source_GPE230_Verschueren_Public_mazeGameMode_h_1451528091(TEXT("/Script/GPE230_Verschueren"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GPE230_Verschueren_Source_GPE230_Verschueren_Public_mazeGameMode_h_1801423883(TEXT("/Script/GPE230_Verschueren"),
 		Z_CompiledInDeferFile_FID_GPE230_Verschueren_Source_GPE230_Verschueren_Public_mazeGameMode_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GPE230_Verschueren_Source_GPE230_Verschueren_Public_mazeGameMode_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
