@@ -16,23 +16,14 @@ void AMazeCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
-	//debugging, remove later
-	UE_LOG(LogTemp, Log, TEXT("started"));
-
+	//set current health to max health
 	_currentHealth = maxHealth;
 
-	//debugging, remove later
-	UE_LOG(LogTemp, Log, TEXT("helth givd: %f"), _currentHealth);
 
 }
 
 float AMazeCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
-	//Super::TakeDamage(DamageAmount, DamageEvent,
-		//EventInstigator, DamageCauser);
-
-	//debugging, remove later
-	//UE_LOG(LogTemp, Log, TEXT("function called correctly"));
 
 	//subtract incoming damage
 	_currentHealth = _currentHealth - DamageAmount;
@@ -41,9 +32,9 @@ float AMazeCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageE
 	UE_LOG(LogTemp, Log, TEXT("Player took %f damage. %f health remaining."), DamageAmount, _currentHealth);
 
 	//check for death
-	//if (_currentHealth <= 0)
+	if (_currentHealth <= 0)
 	{
-		//Die();
+		Die();
 	}
 
 	return DamageAmount;

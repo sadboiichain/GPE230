@@ -42,18 +42,6 @@
     <ClInclude Include="..\..\Source\GPE230_Verschueren\GPE230_Verschueren.h">
       <Filter>Source\GPE230_Verschueren</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\GPE230_Verschueren\GPE230_VerschuerenCharacter.cpp">
-      <Filter>Source\GPE230_Verschueren</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\GPE230_Verschueren\GPE230_VerschuerenCharacter.h">
-      <Filter>Source\GPE230_Verschueren</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\GPE230_Verschueren\GPE230_VerschuerenGameMode.cpp">
-      <Filter>Source\GPE230_Verschueren</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\GPE230_Verschueren\GPE230_VerschuerenGameMode.h">
-      <Filter>Source\GPE230_Verschueren</Filter>
-    </ClInclude>
     <Filter Include="Source\GPE230_Verschueren\Private">
       <UniqueIdentifier>{CD009794-CFBA-379A-8CD0-6DBECF0ADD86}</UniqueIdentifier>
     </Filter>
