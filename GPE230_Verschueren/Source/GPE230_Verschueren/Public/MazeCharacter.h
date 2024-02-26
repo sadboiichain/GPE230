@@ -22,6 +22,10 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	//maximum and starting health for this character
+	UPROPERTY(EditAnywhere)
+	float maxHealth;
+
 private:
 	UPROPERTY(EditAnywhere)
 	float moveSpeed;
@@ -33,10 +37,6 @@ private:
 	void MoveLR(float value);
 	void Rotate(float value);
 
-public:
-	//maximum and starting health for this character
-	UPROPERTY(EditAnywhere)
-	float maxHealth;
 
 protected:
 	//current health for this character
