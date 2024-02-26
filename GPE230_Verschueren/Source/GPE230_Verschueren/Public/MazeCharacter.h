@@ -36,4 +36,14 @@ private:
 	void MoveFB(float value);
 	void MoveLR(float value);
 	void Rotate(float value);
+
+public:
+	//maximum and starting health for this character
+	UPROPERTY(EditAnywhere)
+	float maxHealth;
+
+protected:
+	//current health for this character
+	float currentHealth;
+
 };
