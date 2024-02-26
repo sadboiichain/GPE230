@@ -15,7 +15,35 @@ AMazeCharacter::AMazeCharacter()
 void AMazeCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	_currentHealth = maxHealth;
+}
+
+float AMazeCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	//subtract incoming damage
+	_currentHealth -= DamageAmount;
+
+	//print damage for log/debug
+	UE_LOG(LogTemp, Log, TEXT("Player took %f damage. %f health remaining."), DamageAmount, _currentHealth);
+
+	//check for death
+	if (_currentHealth <= 0)
+	{
+		Die();
+	}
+
+	return DamageAmount;
+}
+
+
+void AMazeCharacter::Die()
+{
+	//stops player inputs
+	moveSpeed = 0;
+	rotationSpeed = 0;
+
+	//trigger game over state
+
 }
 
 // Called every frame

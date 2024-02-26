@@ -134,18 +134,6 @@
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClInclude Include="..\..\Source\GPE230_Verschueren\GPE230_VerschuerenGameMode.h"/>
-    <ClCompile Include="..\..\Source\GPE230_Verschueren\mazePlayerCharacter.cpp">
-      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
-      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\GPE230_Verschueren\mazePlayerCharacter.h"/>
-    <ClCompile Include="..\..\Source\GPE230_Verschueren\MazePlayerController.cpp">
-      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
-      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\GPE230_Verschueren\MazePlayerController.h"/>
     <ClCompile Include="..\..\Source\GPE230_Verschueren\Private\LockAndKey.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
