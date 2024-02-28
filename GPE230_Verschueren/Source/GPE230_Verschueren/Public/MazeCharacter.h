@@ -38,7 +38,7 @@ private:
 	void Rotate(float value);
 
 
-protected:
+//protected:
 	//current health for this character
 	float _currentHealth;
 	
