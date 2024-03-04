@@ -42,6 +42,18 @@
     <ClInclude Include="..\..\Source\GPE230_Verschueren\GPE230_Verschueren.h">
       <Filter>Source\GPE230_Verschueren</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\GPE230_Verschueren\GPE230_VerschuerenCharacter.cpp">
+      <Filter>Source\GPE230_Verschueren</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GPE230_Verschueren\GPE230_VerschuerenCharacter.h">
+      <Filter>Source\GPE230_Verschueren</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GPE230_Verschueren\GPE230_VerschuerenGameMode.cpp">
+      <Filter>Source\GPE230_Verschueren</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GPE230_Verschueren\GPE230_VerschuerenGameMode.h">
+      <Filter>Source\GPE230_Verschueren</Filter>
+    </ClInclude>
     <Filter Include="Source\GPE230_Verschueren\Private">
       <UniqueIdentifier>{CD009794-CFBA-379A-8CD0-6DBECF0ADD86}</UniqueIdentifier>
     </Filter>
@@ -60,6 +72,9 @@
     <ClCompile Include="..\..\Source\GPE230_Verschueren\Private\mazePlayerController.cpp">
       <Filter>Source\GPE230_Verschueren\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\GPE230_Verschueren\Private\NPCEnemy.cpp">
+      <Filter>Source\GPE230_Verschueren\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\GPE230_Verschueren\Public">
       <UniqueIdentifier>{1C27A9EB-18BC-3B44-B267-A14B51506E0F}</UniqueIdentifier>
     </Filter>
@@ -76,6 +91,9 @@
       <Filter>Source\GPE230_Verschueren\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\GPE230_Verschueren\Public\mazePlayerController.h">
+      <Filter>Source\GPE230_Verschueren\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GPE230_Verschueren\Public\NPCEnemy.h">
       <Filter>Source\GPE230_Verschueren\Public</Filter>
     </ClInclude>
   </ItemGroup>

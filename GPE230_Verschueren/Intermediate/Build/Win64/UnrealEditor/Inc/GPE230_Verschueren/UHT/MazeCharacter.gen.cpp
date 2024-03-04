@@ -10,6 +10,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeMazeCharacter() {}
 // Cross Module References
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
+	ENGINE_API UClass* Z_Construct_UClass_UAnimSequence_NoRegister();
 	GPE230_VERSCHUEREN_API UClass* Z_Construct_UClass_AMazeCharacter();
 	GPE230_VERSCHUEREN_API UClass* Z_Construct_UClass_AMazeCharacter_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_GPE230_Verschueren();
@@ -40,6 +41,10 @@ void EmptyLinkFunctionForGeneratedCodeMazeCharacter() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_rotationSpeed_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_rotationSpeed;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp__deathAnim_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp__deathAnim;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -83,10 +88,24 @@ void EmptyLinkFunctionForGeneratedCodeMazeCharacter() {}
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMazeCharacter_Statics::NewProp_rotationSpeed = { "rotationSpeed", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMazeCharacter, rotationSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMazeCharacter_Statics::NewProp_rotationSpeed_MetaData), Z_Construct_UClass_AMazeCharacter_Statics::NewProp_rotationSpeed_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMazeCharacter_Statics::NewProp__deathAnim_MetaData[] = {
+		{ "Category", "MazeCharacter" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//ANIM TO PLAY WHEN CHARACTER DIES\n" },
+#endif
+		{ "ModuleRelativePath", "Public/MazeCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "ANIM TO PLAY WHEN CHARACTER DIES" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMazeCharacter_Statics::NewProp__deathAnim = { "_deathAnim", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMazeCharacter, _deathAnim), Z_Construct_UClass_UAnimSequence_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMazeCharacter_Statics::NewProp__deathAnim_MetaData), Z_Construct_UClass_AMazeCharacter_Statics::NewProp__deathAnim_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMazeCharacter_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMazeCharacter_Statics::NewProp_maxHealth,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMazeCharacter_Statics::NewProp_moveSpeed,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMazeCharacter_Statics::NewProp_rotationSpeed,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMazeCharacter_Statics::NewProp__deathAnim,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AMazeCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AMazeCharacter>::IsAbstract,
@@ -126,9 +145,9 @@ void EmptyLinkFunctionForGeneratedCodeMazeCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GPE230_Verschueren_Source_GPE230_Verschueren_Public_MazeCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AMazeCharacter, AMazeCharacter::StaticClass, TEXT("AMazeCharacter"), &Z_Registration_Info_UClass_AMazeCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMazeCharacter), 3838716910U) },
+		{ Z_Construct_UClass_AMazeCharacter, AMazeCharacter::StaticClass, TEXT("AMazeCharacter"), &Z_Registration_Info_UClass_AMazeCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMazeCharacter), 419445561U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GPE230_Verschueren_Source_GPE230_Verschueren_Public_MazeCharacter_h_206147255(TEXT("/Script/GPE230_Verschueren"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GPE230_Verschueren_Source_GPE230_Verschueren_Public_MazeCharacter_h_4121842654(TEXT("/Script/GPE230_Verschueren"),
 		Z_CompiledInDeferFile_FID_GPE230_Verschueren_Source_GPE230_Verschueren_Public_MazeCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GPE230_Verschueren_Source_GPE230_Verschueren_Public_MazeCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

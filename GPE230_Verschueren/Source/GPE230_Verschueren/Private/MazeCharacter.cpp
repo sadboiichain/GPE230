@@ -24,28 +24,37 @@ void AMazeCharacter::BeginPlay()
 
 float AMazeCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
-
-	//subtract incoming damage
-	_currentHealth = _currentHealth - DamageAmount;
-
-	//print damage for log/debug
-	UE_LOG(LogTemp, Log, TEXT("Player took %f damage. %f health remaining."), DamageAmount, _currentHealth);
-
-	//check for death
-	if (_currentHealth <= 0)
+	if (!_isDead)
 	{
-		Die();
-	}
 
-	return DamageAmount;
+
+		//subtract incoming damage
+		_currentHealth = _currentHealth - DamageAmount;
+
+		//print damage for log/debug
+		UE_LOG(LogTemp, Log, TEXT("Player took %f damage. %f health remaining."), DamageAmount, _currentHealth);
+
+		//check for death
+		if (_currentHealth <= 0)
+		{
+			Die();
+		}
+
+		return DamageAmount;
+	}
+	else return 0;
 }
 
 
 void AMazeCharacter::Die()
 {
 	//stops player inputs
+	_isDead = true;
+	_currentHealth = 0;
 	moveSpeed = 0;
 	rotationSpeed = 0;
+
+	GetMesh()->PlayAnimation(_deathAnim, false);
 
 	//trigger game over state
 

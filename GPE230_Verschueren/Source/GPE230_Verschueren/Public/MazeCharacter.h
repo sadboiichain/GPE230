@@ -33,12 +33,20 @@ private:
 	float rotationSpeed;
 
 private:
+
+	//ANIM TO PLAY WHEN CHARACTER DIES
+	UPROPERTY(EditAnywhere)
+	UAnimSequence* _deathAnim;
+
+	//is player ready to restart?
+	bool _isDead = false;
+
 	void MoveFB(float value);
 	void MoveLR(float value);
 	void Rotate(float value);
 
 
-//protected:
+//protected: I FOUND THIS WAS COMMENTED IN WEEK 3 AND IM TOO SCARED TO UNDO IT
 	//current health for this character
 	float _currentHealth;
 	
