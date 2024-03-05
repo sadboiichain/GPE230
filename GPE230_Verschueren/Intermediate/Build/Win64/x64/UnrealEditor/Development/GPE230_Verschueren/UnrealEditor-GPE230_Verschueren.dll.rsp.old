@@ -34,6 +34,7 @@
 /NODEFAULTLIB:"LIBCD"
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN:6
+/NATVIS:"..\Plugins\FX\Niagara\Intermediate\Build\Win64\x64\UnrealEditor\Development\Niagara\Niagara.natvis"
 "C:\Users\Chain\Documents\GitHub\GPE230\GPE230_Verschueren\Intermediate\Build\Win64\x64\GPE230_VerschuerenEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
 "C:\Users\Chain\Documents\GitHub\GPE230\GPE230_Verschueren\Intermediate\Build\Win64\x64\UnrealEditor\Development\GPE230_Verschueren\GPE230_Verschueren.init.gen.cpp.obj"
 "C:\Users\Chain\Documents\GitHub\GPE230\GPE230_Verschueren\Intermediate\Build\Win64\x64\UnrealEditor\Development\GPE230_Verschueren\GPE230_VerschuerenCharacter.gen.cpp.obj"
@@ -58,6 +59,7 @@
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Core\UnrealEditor-Core.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUObject\UnrealEditor-CoreUObject.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\InputCore\UnrealEditor-InputCore.lib"
+"..\Plugins\FX\Niagara\Intermediate\Build\Win64\x64\UnrealEditor\Development\Niagara\UnrealEditor-Niagara.lib"
 "..\Plugins\EnhancedInput\Intermediate\Build\Win64\x64\UnrealEditor\Development\EnhancedInput\UnrealEditor-EnhancedInput.lib"
 "delayimp.lib"
 "wininet.lib"

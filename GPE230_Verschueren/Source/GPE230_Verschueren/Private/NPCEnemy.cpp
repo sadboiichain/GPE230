@@ -16,6 +16,7 @@ ANPCEnemy::ANPCEnemy()
 
 void ANPCEnemy::DetectHit()
 {
+
 	bool canDamage = true;
 
 	//get location of fist

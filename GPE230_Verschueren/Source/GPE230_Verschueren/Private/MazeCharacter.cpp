@@ -92,3 +92,23 @@ void AMazeCharacter::Rotate(float value)
 	AddControllerYawInput(value * rotationSpeed);
 }
 
+void AMazeCharacter::ActivateStunParticleSystem()
+{
+	if (_stunSystem)
+	{
+		USceneComponent* AttachComp = GetDefaultAttachComponent();
+		
+		UNiagaraComponent* NiagaraComp = UNiagaraFunctionLibrary::SpawnSystemAttached(_stunSystem, 
+			AttachComp, NAME_None, FVector(0), FRotator(0), EAttachLocation::Type::KeepRelativeOffset, true );
+	
+		NiagaraComp->Activate();
+
+	}
+	else
+	{
+		//print damage for log/debug
+		UE_LOG(LogTemp, Log, TEXT("Player attempted to use particle system, but no template particle system was found."));
+	}
+	
+}
+

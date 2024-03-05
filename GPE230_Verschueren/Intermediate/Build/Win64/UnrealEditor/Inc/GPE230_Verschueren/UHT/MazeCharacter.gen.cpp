@@ -13,10 +13,51 @@ void EmptyLinkFunctionForGeneratedCodeMazeCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_UAnimSequence_NoRegister();
 	GPE230_VERSCHUEREN_API UClass* Z_Construct_UClass_AMazeCharacter();
 	GPE230_VERSCHUEREN_API UClass* Z_Construct_UClass_AMazeCharacter_NoRegister();
+	NIAGARA_API UClass* Z_Construct_UClass_UNiagaraSystem_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_GPE230_Verschueren();
 // End Cross Module References
+	DEFINE_FUNCTION(AMazeCharacter::execActivateStunParticleSystem)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ActivateStunParticleSystem();
+		P_NATIVE_END;
+	}
 	void AMazeCharacter::StaticRegisterNativesAMazeCharacter()
 	{
+		UClass* Class = AMazeCharacter::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "ActivateStunParticleSystem", &AMazeCharacter::execActivateStunParticleSystem },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AMazeCharacter_ActivateStunParticleSystem_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMazeCharacter_ActivateStunParticleSystem_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//start the particle effects\n" },
+#endif
+		{ "ModuleRelativePath", "Public/MazeCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "start the particle effects" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMazeCharacter_ActivateStunParticleSystem_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMazeCharacter, nullptr, "ActivateStunParticleSystem", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AMazeCharacter_ActivateStunParticleSystem_Statics::Function_MetaDataParams), Z_Construct_UFunction_AMazeCharacter_ActivateStunParticleSystem_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_AMazeCharacter_ActivateStunParticleSystem()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMazeCharacter_ActivateStunParticleSystem_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AMazeCharacter);
 	UClass* Z_Construct_UClass_AMazeCharacter_NoRegister()
@@ -26,6 +67,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeCharacter() {}
 	struct Z_Construct_UClass_AMazeCharacter_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -45,6 +87,10 @@ void EmptyLinkFunctionForGeneratedCodeMazeCharacter() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp__deathAnim_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp__deathAnim;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp__stunSystem_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp__stunSystem;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -54,6 +100,10 @@ void EmptyLinkFunctionForGeneratedCodeMazeCharacter() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_GPE230_Verschueren,
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMazeCharacter_Statics::DependentSingletons) < 16);
+	const FClassFunctionLinkInfo Z_Construct_UClass_AMazeCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AMazeCharacter_ActivateStunParticleSystem, "ActivateStunParticleSystem" }, // 2613602357
+	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMazeCharacter_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMazeCharacter_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
@@ -101,11 +151,25 @@ void EmptyLinkFunctionForGeneratedCodeMazeCharacter() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMazeCharacter_Statics::NewProp__deathAnim = { "_deathAnim", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMazeCharacter, _deathAnim), Z_Construct_UClass_UAnimSequence_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMazeCharacter_Statics::NewProp__deathAnim_MetaData), Z_Construct_UClass_AMazeCharacter_Statics::NewProp__deathAnim_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMazeCharacter_Statics::NewProp__stunSystem_MetaData[] = {
+		{ "Category", "MazeCharacter" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//particle effects system\n" },
+#endif
+		{ "ModuleRelativePath", "Public/MazeCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "particle effects system" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMazeCharacter_Statics::NewProp__stunSystem = { "_stunSystem", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMazeCharacter, _stunSystem), Z_Construct_UClass_UNiagaraSystem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMazeCharacter_Statics::NewProp__stunSystem_MetaData), Z_Construct_UClass_AMazeCharacter_Statics::NewProp__stunSystem_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMazeCharacter_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMazeCharacter_Statics::NewProp_maxHealth,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMazeCharacter_Statics::NewProp_moveSpeed,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMazeCharacter_Statics::NewProp_rotationSpeed,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMazeCharacter_Statics::NewProp__deathAnim,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMazeCharacter_Statics::NewProp__stunSystem,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AMazeCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AMazeCharacter>::IsAbstract,
@@ -115,11 +179,11 @@ void EmptyLinkFunctionForGeneratedCodeMazeCharacter() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_AMazeCharacter_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_AMazeCharacter_Statics::PropPointers),
 		0,
 		0x009000A4u,
@@ -145,9 +209,9 @@ void EmptyLinkFunctionForGeneratedCodeMazeCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GPE230_Verschueren_Source_GPE230_Verschueren_Public_MazeCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AMazeCharacter, AMazeCharacter::StaticClass, TEXT("AMazeCharacter"), &Z_Registration_Info_UClass_AMazeCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMazeCharacter), 419445561U) },
+		{ Z_Construct_UClass_AMazeCharacter, AMazeCharacter::StaticClass, TEXT("AMazeCharacter"), &Z_Registration_Info_UClass_AMazeCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMazeCharacter), 3096954542U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GPE230_Verschueren_Source_GPE230_Verschueren_Public_MazeCharacter_h_4121842654(TEXT("/Script/GPE230_Verschueren"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GPE230_Verschueren_Source_GPE230_Verschueren_Public_MazeCharacter_h_2559169603(TEXT("/Script/GPE230_Verschueren"),
 		Z_CompiledInDeferFile_FID_GPE230_Verschueren_Source_GPE230_Verschueren_Public_MazeCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GPE230_Verschueren_Source_GPE230_Verschueren_Public_MazeCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

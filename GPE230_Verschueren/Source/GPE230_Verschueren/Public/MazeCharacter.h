@@ -4,7 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "NiagaraFunctionLibrary.h"
+#include "NiagaraComponent.h"
 #include "MazeCharacter.generated.h"
+
 
 UCLASS()
 class GPE230_VERSCHUEREN_API AMazeCharacter : public ACharacter
@@ -44,6 +47,15 @@ private:
 	void MoveFB(float value);
 	void MoveLR(float value);
 	void Rotate(float value);
+
+
+	//particle effects system
+	UPROPERTY(EditAnywhere)
+	UNiagaraSystem* _stunSystem;
+
+	//start the particle effects
+	UFUNCTION(BlueprintCallable)
+	void ActivateStunParticleSystem();
 
 
 //protected: I FOUND THIS WAS COMMENTED IN WEEK 3 AND IM TOO SCARED TO UNDO IT
