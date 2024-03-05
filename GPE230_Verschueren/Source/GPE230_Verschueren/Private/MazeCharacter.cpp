@@ -77,6 +77,26 @@ void AMazeCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	PlayerInputComponent->BindAxis("Rotate", this, &AMazeCharacter::Rotate);
 }
 
+void AMazeCharacter::heal(float health)
+{
+	if (!_isDead)
+	{
+		//subtract incoming damage
+		_currentHealth = _currentHealth + health;
+
+		//print damage for log/debug
+		UE_LOG(LogTemp, Log, TEXT("Player healed %f damage. %f health remaining."), health, _currentHealth);
+
+		
+	}
+
+}
+
+void AMazeCharacter::doubleSpeed(float speed)
+{
+	moveSpeed = speed;
+}
+
 void AMazeCharacter::MoveFB(float value)
 {
 	AddMovementInput(GetActorForwardVector(), value * moveSpeed);

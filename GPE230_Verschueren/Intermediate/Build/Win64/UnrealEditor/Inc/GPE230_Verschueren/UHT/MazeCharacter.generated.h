@@ -19,7 +19,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_GPE230_Verschueren_Source_GPE230_Verschueren_Public_MazeCharacter_h_15_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_GPE230_Verschueren_Source_GPE230_Verschueren_Public_MazeCharacter_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execActivateStunParticleSystem);
+	DECLARE_FUNCTION(execActivateStunParticleSystem); \
+	DECLARE_FUNCTION(execdoubleSpeed); \
+	DECLARE_FUNCTION(execheal);
 
 
 #define FID_GPE230_Verschueren_Source_GPE230_Verschueren_Public_MazeCharacter_h_15_ACCESSORS

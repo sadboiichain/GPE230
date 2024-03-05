@@ -57,6 +57,9 @@
     <Filter Include="Source\GPE230_Verschueren\Private">
       <UniqueIdentifier>{CD009794-CFBA-379A-8CD0-6DBECF0ADD86}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\GPE230_Verschueren\Private\HealthPickup.cpp">
+      <Filter>Source\GPE230_Verschueren\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\GPE230_Verschueren\Private\LockAndKey.cpp">
       <Filter>Source\GPE230_Verschueren\Private</Filter>
     </ClCompile>
@@ -75,9 +78,18 @@
     <ClCompile Include="..\..\Source\GPE230_Verschueren\Private\NPCEnemy.cpp">
       <Filter>Source\GPE230_Verschueren\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\GPE230_Verschueren\Private\Pickups.cpp">
+      <Filter>Source\GPE230_Verschueren\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GPE230_Verschueren\Private\SpeedPickup.cpp">
+      <Filter>Source\GPE230_Verschueren\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\GPE230_Verschueren\Public">
       <UniqueIdentifier>{1C27A9EB-18BC-3B44-B267-A14B51506E0F}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\GPE230_Verschueren\Public\HealthPickup.h">
+      <Filter>Source\GPE230_Verschueren\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\GPE230_Verschueren\Public\LockAndKey.h">
       <Filter>Source\GPE230_Verschueren\Public</Filter>
     </ClInclude>
@@ -94,6 +106,12 @@
       <Filter>Source\GPE230_Verschueren\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\GPE230_Verschueren\Public\NPCEnemy.h">
+      <Filter>Source\GPE230_Verschueren\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GPE230_Verschueren\Public\Pickups.h">
+      <Filter>Source\GPE230_Verschueren\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GPE230_Verschueren\Public\SpeedPickup.h">
       <Filter>Source\GPE230_Verschueren\Public</Filter>
     </ClInclude>
   </ItemGroup>

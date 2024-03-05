@@ -29,6 +29,14 @@ public:
 	UPROPERTY(EditAnywhere)
 	float maxHealth;
 
+	//add health
+	UFUNCTION()
+	void heal(float health);
+
+	//add health
+	UFUNCTION()
+	void doubleSpeed(float speed);
+
 private:
 	UPROPERTY(EditAnywhere)
 	float moveSpeed;

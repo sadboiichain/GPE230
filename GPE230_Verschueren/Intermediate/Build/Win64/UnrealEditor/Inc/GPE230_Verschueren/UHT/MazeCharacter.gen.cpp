@@ -23,11 +23,29 @@ void EmptyLinkFunctionForGeneratedCodeMazeCharacter() {}
 		P_THIS->ActivateStunParticleSystem();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(AMazeCharacter::execdoubleSpeed)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_speed);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->doubleSpeed(Z_Param_speed);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AMazeCharacter::execheal)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_health);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->heal(Z_Param_health);
+		P_NATIVE_END;
+	}
 	void AMazeCharacter::StaticRegisterNativesAMazeCharacter()
 	{
 		UClass* Class = AMazeCharacter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "ActivateStunParticleSystem", &AMazeCharacter::execActivateStunParticleSystem },
+			{ "doubleSpeed", &AMazeCharacter::execdoubleSpeed },
+			{ "heal", &AMazeCharacter::execheal },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -56,6 +74,86 @@ void EmptyLinkFunctionForGeneratedCodeMazeCharacter() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMazeCharacter_ActivateStunParticleSystem_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AMazeCharacter_doubleSpeed_Statics
+	{
+		struct MazeCharacter_eventdoubleSpeed_Parms
+		{
+			float speed;
+		};
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_speed;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AMazeCharacter_doubleSpeed_Statics::NewProp_speed = { "speed", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(MazeCharacter_eventdoubleSpeed_Parms, speed), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMazeCharacter_doubleSpeed_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMazeCharacter_doubleSpeed_Statics::NewProp_speed,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMazeCharacter_doubleSpeed_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//add health\n" },
+#endif
+		{ "ModuleRelativePath", "Public/MazeCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "add health" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMazeCharacter_doubleSpeed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMazeCharacter, nullptr, "doubleSpeed", nullptr, nullptr, Z_Construct_UFunction_AMazeCharacter_doubleSpeed_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMazeCharacter_doubleSpeed_Statics::PropPointers), sizeof(Z_Construct_UFunction_AMazeCharacter_doubleSpeed_Statics::MazeCharacter_eventdoubleSpeed_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AMazeCharacter_doubleSpeed_Statics::Function_MetaDataParams), Z_Construct_UFunction_AMazeCharacter_doubleSpeed_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AMazeCharacter_doubleSpeed_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_AMazeCharacter_doubleSpeed_Statics::MazeCharacter_eventdoubleSpeed_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_AMazeCharacter_doubleSpeed()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMazeCharacter_doubleSpeed_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AMazeCharacter_heal_Statics
+	{
+		struct MazeCharacter_eventheal_Parms
+		{
+			float health;
+		};
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_health;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AMazeCharacter_heal_Statics::NewProp_health = { "health", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(MazeCharacter_eventheal_Parms, health), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMazeCharacter_heal_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMazeCharacter_heal_Statics::NewProp_health,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMazeCharacter_heal_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//add health\n" },
+#endif
+		{ "ModuleRelativePath", "Public/MazeCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "add health" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMazeCharacter_heal_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMazeCharacter, nullptr, "heal", nullptr, nullptr, Z_Construct_UFunction_AMazeCharacter_heal_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMazeCharacter_heal_Statics::PropPointers), sizeof(Z_Construct_UFunction_AMazeCharacter_heal_Statics::MazeCharacter_eventheal_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AMazeCharacter_heal_Statics::Function_MetaDataParams), Z_Construct_UFunction_AMazeCharacter_heal_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AMazeCharacter_heal_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_AMazeCharacter_heal_Statics::MazeCharacter_eventheal_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_AMazeCharacter_heal()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMazeCharacter_heal_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -102,6 +200,8 @@ void EmptyLinkFunctionForGeneratedCodeMazeCharacter() {}
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMazeCharacter_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_AMazeCharacter_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AMazeCharacter_ActivateStunParticleSystem, "ActivateStunParticleSystem" }, // 2613602357
+		{ &Z_Construct_UFunction_AMazeCharacter_doubleSpeed, "doubleSpeed" }, // 2780450421
+		{ &Z_Construct_UFunction_AMazeCharacter_heal, "heal" }, // 2545756419
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMazeCharacter_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -209,9 +309,9 @@ void EmptyLinkFunctionForGeneratedCodeMazeCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GPE230_Verschueren_Source_GPE230_Verschueren_Public_MazeCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AMazeCharacter, AMazeCharacter::StaticClass, TEXT("AMazeCharacter"), &Z_Registration_Info_UClass_AMazeCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMazeCharacter), 3096954542U) },
+		{ Z_Construct_UClass_AMazeCharacter, AMazeCharacter::StaticClass, TEXT("AMazeCharacter"), &Z_Registration_Info_UClass_AMazeCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMazeCharacter), 350081506U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GPE230_Verschueren_Source_GPE230_Verschueren_Public_MazeCharacter_h_2559169603(TEXT("/Script/GPE230_Verschueren"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GPE230_Verschueren_Source_GPE230_Verschueren_Public_MazeCharacter_h_3558703150(TEXT("/Script/GPE230_Verschueren"),
 		Z_CompiledInDeferFile_FID_GPE230_Verschueren_Source_GPE230_Verschueren_Public_MazeCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GPE230_Verschueren_Source_GPE230_Verschueren_Public_MazeCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -5,16 +5,6 @@
 #include "MazeCharacter.h"
 
 
-/*
-ALockAndKey::ALockAndKey()
-{
-	//call when overlapped?
-	OnActorBeginOverlap.AddDynamic(this, &ALockAndKey::CheckActorType);
-}
-*/
-
-
-
 void ALockAndKey::BeginPlay()
 {
 	Super::BeginPlay();
