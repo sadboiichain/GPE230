@@ -81,20 +81,36 @@ void AMazeCharacter::heal(float health)
 {
 	if (!_isDead)
 	{
-		//subtract incoming damage
+		//add health
 		_currentHealth = _currentHealth + health;
 
-		//print damage for log/debug
+		//print for log/debug
 		UE_LOG(LogTemp, Log, TEXT("Player healed %f damage. %f health remaining."), health, _currentHealth);
 
-		
 	}
 
 }
 
 void AMazeCharacter::doubleSpeed(float speed)
 {
-	moveSpeed = speed;
+	moveSpeed += speed;
+}
+
+bool AMazeCharacter::isAtMax()
+{
+	if (_currentHealth == maxHealth)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+		
+}
+
+void AMazeCharacter::OpenVictoryScreen()
+{
 }
 
 void AMazeCharacter::MoveFB(float value)

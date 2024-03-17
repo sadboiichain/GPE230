@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "NiagaraFunctionLibrary.h"
 #include "NiagaraComponent.h"
+#include "Blueprint/UserWidget.h"
 #include "MazeCharacter.generated.h"
 
 
@@ -37,6 +38,10 @@ public:
 	UFUNCTION()
 	void doubleSpeed(float speed);
 
+	bool isAtMax();
+
+	virtual void OpenVictoryScreen();
+
 private:
 	UPROPERTY(EditAnywhere)
 	float moveSpeed;
@@ -66,7 +71,7 @@ private:
 	void ActivateStunParticleSystem();
 
 
-//protected: I FOUND THIS WAS COMMENTED IN WEEK 3 AND IM TOO SCARED TO UNDO IT
+protected: 
 	//current health for this character
 	float _currentHealth;
 	
@@ -75,6 +80,18 @@ private:
 
 	virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, 
 		AController* EventInstigator, AActor* DamageCauser) override;
+
+	//UI CODE
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<UUserWidget> _gameOverScreenTemplate;
+	UUserWidget* _gameOverScreenInstance;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<UUserWidget> _victoryScreenTemplate;
+	UUserWidget* _victoryScreenInstance;
+
+	//the controller that manages this character
+	APlayerController* _controller;
 
 	virtual void Die();
 };
