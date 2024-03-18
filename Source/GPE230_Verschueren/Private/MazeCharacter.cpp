@@ -19,7 +19,11 @@ void AMazeCharacter::BeginPlay()
 	//set current health to max health
 	_currentHealth = maxHealth;
 
+	//ui code
+	_controller = Cast<APlayerController>(GetController());
 
+	_gameOverScreenInstance = CreateWidget(GetWorld(), _gameOverScreenTemplate);
+	_victoryScreenInstance = CreateWidget(GetWorld(), _victoryScreenTemplate);
 }
 
 float AMazeCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
@@ -57,7 +61,8 @@ void AMazeCharacter::Die()
 	GetMesh()->PlayAnimation(_deathAnim, false);
 
 	//trigger game over state
-
+	UE_LOG(LogTemp, Log, TEXT("Player attempted to pause."));
+	OpenGameOverScreen();
 }
 
 // Called every frame
@@ -109,9 +114,34 @@ bool AMazeCharacter::isAtMax()
 		
 }
 
+
 void AMazeCharacter::OpenVictoryScreen()
 {
+	
+
+	_victoryScreenInstance->AddToViewport();
+	PauseGameplay(true);
+	ShowMouseCursor();
 }
+
+void AMazeCharacter::OpenGameOverScreen()
+{
+	ShowMouseCursor();
+	_gameOverScreenInstance->AddToViewport();
+	
+}
+
+void AMazeCharacter::PauseGameplay(bool bIsPaused)
+{
+	_controller->SetPause(bIsPaused);
+}
+
+void AMazeCharacter::ShowMouseCursor()
+{
+	_controller->bShowMouseCursor = true;
+
+}
+
 
 void AMazeCharacter::MoveFB(float value)
 {

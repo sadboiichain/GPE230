@@ -40,8 +40,15 @@ public:
 
 	bool isAtMax();
 
+	
+	//more ui code
 	virtual void OpenVictoryScreen();
-
+	
+protected:
+	virtual void OpenGameOverScreen();
+	virtual void PauseGameplay(bool bIsPaused);
+	virtual void ShowMouseCursor();
+	
 private:
 	UPROPERTY(EditAnywhere)
 	float moveSpeed;
@@ -84,10 +91,12 @@ protected:
 	//UI CODE
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<UUserWidget> _gameOverScreenTemplate;
+	UPROPERTY()
 	UUserWidget* _gameOverScreenInstance;
 
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<UUserWidget> _victoryScreenTemplate;
+	UPROPERTY()
 	UUserWidget* _victoryScreenInstance;
 
 	//the controller that manages this character
