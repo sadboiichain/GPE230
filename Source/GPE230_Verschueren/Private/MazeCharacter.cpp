@@ -61,7 +61,6 @@ void AMazeCharacter::Die()
 	GetMesh()->PlayAnimation(_deathAnim, false);
 
 	//trigger game over state
-	UE_LOG(LogTemp, Log, TEXT("Player attempted to pause."));
 	OpenGameOverScreen();
 }
 
@@ -126,8 +125,9 @@ void AMazeCharacter::OpenVictoryScreen()
 
 void AMazeCharacter::OpenGameOverScreen()
 {
-	ShowMouseCursor();
+	
 	_gameOverScreenInstance->AddToViewport();
+	ShowMouseCursor();
 	
 }
 
