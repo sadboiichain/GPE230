@@ -27,7 +27,7 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	//maximum and starting health for this character
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float maxHealth;
 
 	//add health
@@ -77,6 +77,9 @@ private:
 	UFUNCTION(BlueprintCallable)
 	void ActivateStunParticleSystem();
 
+	//start the particle effects
+	UFUNCTION(BlueprintCallable)
+	float getCurrentHealth();
 
 protected: 
 	//current health for this character

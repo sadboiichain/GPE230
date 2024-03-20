@@ -178,3 +178,8 @@ void AMazeCharacter::ActivateStunParticleSystem()
 	
 }
 
+float AMazeCharacter::getCurrentHealth()
+{
+	return _currentHealth;
+}
+
