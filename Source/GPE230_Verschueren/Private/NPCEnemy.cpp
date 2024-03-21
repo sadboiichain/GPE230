@@ -59,6 +59,9 @@ void ANPCEnemy::DetectHit()
 				UGameplayStatics::ApplyDamage(HitResult.GetActor(),
 					_HitDamage, GetController(), this, UDamageType::StaticClass());
 
+				//play sound
+				UGameplayStatics::PlaySoundAtLocation(GetWorld(), _punchSound, GetActorLocation());
+
 				canDamage = false;
 
 			}

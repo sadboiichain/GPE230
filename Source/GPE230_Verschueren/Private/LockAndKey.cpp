@@ -17,10 +17,20 @@ void ALockAndKey::CheckActorType(AActor* OverlappedActor, AActor* OtherActor)
 {
 	//if other actor is player chr(maze character)
 	if (OtherActor->IsA(AMazeCharacter::StaticClass()))
+	{
+		PlaySound();
 		OpenTheDoor();
+	}
+		
 }
 
 void ALockAndKey::OpenTheDoor()
 {
 	this->Destroy();
+}
+
+void ALockAndKey::PlaySound()
+{
+	//play sound
+	UGameplayStatics::PlaySoundAtLocation(GetWorld(), _doorSound, GetActorLocation());
 }

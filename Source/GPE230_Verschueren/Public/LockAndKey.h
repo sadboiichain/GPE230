@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "Engine/TriggerBox.h"
+#include "Sound/SoundWave.h"
+#include "Kismet/GameplayStatics.h"
 #include "LockAndKey.generated.h"
 
 /**
@@ -29,4 +31,11 @@ public:
 	UFUNCTION()
 	void OpenTheDoor();
 
+	//door sound
+	UPROPERTY(EditAnywhere)
+	USoundWave* _doorSound;
+
+	//play sound
+	UFUNCTION()
+	void PlaySound();
 };

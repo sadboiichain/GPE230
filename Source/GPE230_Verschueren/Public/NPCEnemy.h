@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Sound/SoundWave.h"
+#include "Kismet/GameplayStatics.h"
 #include "NPCEnemy.generated.h"
 
 UCLASS()
@@ -42,5 +44,9 @@ private:
 	//dmg per punch
 	UPROPERTY(EditAnywhere)
 	float _HitDamage;
+
+	//punch sound
+	UPROPERTY(EditAnywhere)
+	USoundWave* _punchSound;
 
 };

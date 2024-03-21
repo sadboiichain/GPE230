@@ -34,12 +34,11 @@ public:
 	UFUNCTION()
 	void heal(float health);
 
-	//add health
+	//add speed
 	UFUNCTION()
 	void doubleSpeed(float speed);
 
-	bool isAtMax();
-
+	
 	
 	//more ui code
 	virtual void OpenVictoryScreen();

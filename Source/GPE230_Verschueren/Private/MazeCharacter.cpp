@@ -100,24 +100,10 @@ void AMazeCharacter::doubleSpeed(float speed)
 	moveSpeed += speed;
 }
 
-bool AMazeCharacter::isAtMax()
-{
-	if (_currentHealth == maxHealth)
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
-		
-}
 
 
 void AMazeCharacter::OpenVictoryScreen()
 {
-	
-
 	_victoryScreenInstance->AddToViewport();
 	PauseGameplay(true);
 	ShowMouseCursor();

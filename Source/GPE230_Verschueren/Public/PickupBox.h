@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "Engine/TriggerBox.h"
+#include "Sound/SoundWave.h"
+#include "Kismet/GameplayStatics.h"
 #include "PickupBox.generated.h"
 
 /**
@@ -32,5 +34,13 @@ protected:
 	//destroy item
 	UFUNCTION()
 	void destroySelf();
+
+	//pickup sound
+	UPROPERTY(EditAnywhere)
+	USoundWave* _pickupSound;
+
+	//play sound
+	UFUNCTION()
+	void PlaySound();
 
 };

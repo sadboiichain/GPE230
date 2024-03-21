@@ -26,4 +26,5 @@ void AVictoryBox::CheckActorType(AActor* OverlappedActor, AActor* OtherActor)
 void AVictoryBox::Apply(AMazeCharacter* player)
 {
 	player->OpenVictoryScreen();
+
 }

@@ -3,19 +3,23 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "MazeCharacter.h"
 #include "PickupBox.h"
-#include "VictoryBox.generated.h"
+#include "MazeCharacter.h"
+#include "stunBox.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class GPE230_VERSCHUEREN_API AVictoryBox : public APickupBox
+class GPE230_VERSCHUEREN_API AstunBox : public APickupBox
 {
 	GENERATED_BODY()
 	
 public:
+	//
+	UPROPERTY(EditAnywhere)
+	float stunCooldown;
+
 	//links the override when the game starts
 	virtual void BeginPlay() override;
 
@@ -25,4 +29,8 @@ public:
 	//complete actions
 	void Apply(AMazeCharacter* player);
 
+protected:
+
+	//destroy item
+	void destroySelf();
 };

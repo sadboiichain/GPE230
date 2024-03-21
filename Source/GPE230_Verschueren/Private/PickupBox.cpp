@@ -17,6 +17,7 @@ void APickupBox::CheckActorType(AActor* OverlappedActor, AActor* OtherActor)
 	if (OtherActor->IsA(AMazeCharacter::StaticClass()))
 	{
 		Apply(Cast <AMazeCharacter>(OtherActor));
+		PlaySound();
 		destroySelf();
 	}
 }
@@ -28,4 +29,11 @@ void APickupBox::Apply(AMazeCharacter* player)
 void APickupBox::destroySelf()
 {
 	this->Destroy();
+}
+
+void APickupBox::PlaySound()
+{
+	//play sound
+	UGameplayStatics::PlaySoundAtLocation(GetWorld(), _pickupSound, GetActorLocation());
+
 }

@@ -1,19 +1,18 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "HealthPickupBox.h"
+#include "stunBox.h"
 #include "MazeCharacter.h"
 
-void AHealthPickupBox::BeginPlay()
+void AstunBox::BeginPlay()
 {
 	Super::BeginPlay();
 	//call when overlapped
-	OnActorBeginOverlap.AddDynamic(this, &AHealthPickupBox::CheckActorType);
+	OnActorBeginOverlap.AddDynamic(this, &AstunBox::CheckActorType);
 }
 
-void AHealthPickupBox::CheckActorType(AActor* OverlappedActor, AActor* OtherActor)
+void AstunBox::CheckActorType(AActor* OverlappedActor, AActor* OtherActor)
 {
-
 	//if other actor is player chr(maze character)
 	if (OtherActor->IsA(AMazeCharacter::StaticClass()))
 	{
@@ -22,12 +21,12 @@ void AHealthPickupBox::CheckActorType(AActor* OverlappedActor, AActor* OtherActo
 	}
 }
 
-void AHealthPickupBox::Apply(AMazeCharacter* player)
+void AstunBox::Apply(AMazeCharacter* player)
 {
-		player->heal(HealAmount);	
+	//player->halfStun(stunCooldown);
 }
 
-void AHealthPickupBox::destroySelf()
+void AstunBox::destroySelf()
 {
 	this->Destroy();
 }
